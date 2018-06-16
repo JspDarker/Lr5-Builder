@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/static', 'StaticPageController@index');
+
+Route::post('/ajax', 'StaticPageController@addPost')->name('ajax');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
